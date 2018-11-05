@@ -7,14 +7,14 @@ struct node {
 };
 
 bool isEmpty(int counter) {
-  if(counter == 0) { //checks to see if the stack is empty
+  if(counter == 0) { //checks to see if empty
     return true;
   }
   return false;
 }
 
 bool isFull(int counter, int size) {
-  if(counter == size) {
+  if(counter == size) { //checks to see if full, might not be used
     return false;
   }
   return false;
@@ -63,12 +63,14 @@ void print(node * head, int counter) { //test print statement
 }
 
 int main() {
+  //initialize stacks
   node * head_stack = new node;
   node * current_stack = new node;  
   head_stack = current_stack;
   int size_stack = 10;
   int counter_stack = 0;
   
+  //initialize queues
   node * head_queue = new node;
   node * current_queue = new node; 
   head_queue = current_queue;
